@@ -88,22 +88,26 @@ FIN HEADER
 /*===============
 SLIDER
 =================*/
-.contenedor-vegas{
-    width: 100%;
-    height: 100vh;
-}
 
 .contenedor-inicio{
     width: 100%;
     height: 100vh;
     display: flex;
-    padding: 0 5rem 10rem 5rem;
-    justify-content: center;
-    align-items: flex-end;
+    padding-left: 5rem;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+        ), url('../img/mateo-4.webp');
+    background-position: top left;
 }
 
 .inicio-columna-1{
     width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .inicio-titulo{
@@ -119,4 +123,15 @@ SLIDER
 }
 /*===============
 FIN SLIDER
+=================*/
+
+
+/*===============
+INICIO SOBRE MI
+=================*/
+
+
+
+/*===============
+FIN SOBRE MI
 =================*/

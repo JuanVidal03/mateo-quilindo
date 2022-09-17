@@ -1,5 +1,5 @@
 //Here are the API with some poems
-const poemasUrl = '../poemas.json';
+const poemasMuestraUrl = '../poemasMuestra.json';
 
 
 //getting data from DOM
@@ -7,30 +7,48 @@ const poemasContainer = document.getElementById('poemas__container');
 
 
 //function gets data
-const poemas = async() =>{
+const poemasMuestra = async() =>{
 
-    const resp = await fetch(poemasUrl);
+    //getting the api data
+    const resp = await fetch(poemasMuestraUrl);
     const data = await resp.json();
 
-    data.forEach(poema => {
+    console.log(data.length);
+
+    //foreach loop for every poem
+    
+
+        data.forEach(poema => {
+    
+            //create a div element with a class
+            const div = document.createElement('div');
+            div.classList.add('card__poemas');
         
-        const div = document.createElement('div');
-        div.classList.add('card__poemas');
-        console.log(div);
+            //create a h5 element, here goes the poem with a class
+            let text = document.createElement('h5');
+            text.classList.add('card__text')
+            text.innerHTML = `${poema.poema}`;
     
-        let title = document.createElement('h5')
-        title.innerHTML = ` Hola ${poema.poema}`;
-        console.log(title);
-        poemasContainer.appendChild(div);
-        div.appendChild(title);
-    });
-
-    /*
-    
-    */
-
+            //append child to all elements
+            poemasContainer.appendChild(div);
+            div.appendChild(text);
+        });
 
 }
 
+poemasMuestra();
 
-poemas();
+
+
+const poemasRandomUrl = '../poemasRandom.json';
+
+const poemasRandom = async() => {
+    const resp = await fetch(poemasRandomUrl);
+    const data = await resp.json();
+
+    console.log(data);
+}
+
+poemasRandom()
+
+

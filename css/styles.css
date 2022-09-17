@@ -252,7 +252,7 @@ INICIO POEMAS
     height: 5rem;
     top: -5rem;
     left: 0rem;
-    background-color: red;
+    background-color: var(--color-primario);
     color: #fff;
     transition: all ease .5s;
     z-index: -1;
